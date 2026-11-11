@@ -1073,7 +1073,27 @@ button {
     padding-top: calc(2.5rem + var(--safe-top));
   }
 
-  /* Nine cards in a gentle arc. */
+  .table--choose {
+    min-height: 260px;
+  }
+
+  .reading__list {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-auto-flow: column;
+  }
+
+  .reading__item {
+    padding: 1.3rem 1.3rem 1.4rem;
+  }
+
+  .app[data-phase='revealed'] .reading,
+  .app[data-phase='resetting'] .reading {
+    max-width: 980px;
+  }
+}
+
+/* Nine cards in a gentle arc, once the whole arc fits (9 × 96px + gaps ≈ 940px). */
+@media (min-width: 1040px) {
   .choices {
     --choice-w: 96px;
     display: grid;
@@ -1097,24 +1117,6 @@ button {
       opacity: 1;
       transform: translateY(calc((var(--i) - 4) * (var(--i) - 4) * 4px)) rotate(calc((var(--i) - 4) * 3deg));
     }
-  }
-
-  .table--choose {
-    min-height: 260px;
-  }
-
-  .reading__list {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-    grid-auto-flow: column;
-  }
-
-  .reading__item {
-    padding: 1.3rem 1.3rem 1.4rem;
-  }
-
-  .app[data-phase='revealed'] .reading,
-  .app[data-phase='resetting'] .reading {
-    max-width: 980px;
   }
 }
 
