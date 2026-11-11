@@ -16,6 +16,7 @@
   --ink: #174536;
 
   --font-display: 'Playfair Display', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-card: 'EB Garamond', 'Garamond', 'Iowan Old Style', Georgia, serif;
   --font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -405,6 +406,9 @@ button {
 }
 
 .card-face__frame {
+  font-family: var(--font-card);
+  font-variant-caps: small-caps;
+  font-synthesis: none;
   position: absolute;
   inset: 5.5%;
   display: flex;
@@ -424,12 +428,14 @@ button {
 }
 
 .card-face__number {
-  font-family: var(--font-display);
   font-weight: 600;
   font-size: 10cqw;
   line-height: 1;
   letter-spacing: 0.08em;
   color: var(--gold-deep);
+  /* Roman numerals are capitals already; keep the zero a full-height figure. */
+  font-variant-caps: normal;
+  font-variant-numeric: lining-nums;
 }
 
 .card-face__art {
@@ -442,10 +448,12 @@ button {
   min-height: 2.3em;
   display: flex;
   align-items: center;
-  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 9cqw;
-  line-height: 1.1;
+  font-size: 10cqw;
+  letter-spacing: 0.01em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  line-height: 1.05;
   color: var(--ink);
   text-wrap: balance;
 }
