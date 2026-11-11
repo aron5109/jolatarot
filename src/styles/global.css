@@ -449,10 +449,9 @@ button {
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 10cqw;
-  letter-spacing: 0.01em;
+  /* Long single words shrink to fit the frame instead of breaking. */
+  font-size: min(10cqw, calc(124cqw / var(--longest-word, 10)));
   max-width: 100%;
-  overflow-wrap: anywhere;
   line-height: 1.05;
   color: var(--ink);
   text-wrap: balance;
