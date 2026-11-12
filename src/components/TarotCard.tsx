@@ -27,7 +27,12 @@ export function CardFace({ drawn }: { drawn: DrawnCard }) {
       <div className="card-face__frame">
         <span className="card-face__number">{toRoman(card.number)}</span>
         <CardArt id={card.id} className="card-face__art" />
-        <span className="card-face__name">{card.name}</span>
+        <span
+          className="card-face__name"
+          style={{ '--longest-word': Math.max(...card.name.split(' ').map((w) => w.length)) } as CSSProperties}
+        >
+          {card.name}
+        </span>
       </div>
     </div>
   );

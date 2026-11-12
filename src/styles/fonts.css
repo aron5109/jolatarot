@@ -27,3 +27,19 @@
   font-display: swap;
   src: url('../assets/fonts/manrope-latin-wght-normal.woff2') format('woff2-variations');
 }
+/* EB Garamond (Renaissance roman) from github.com/octaviopardo/EBGaramond12, subset to Latin-1
+   with its OpenType small caps (smcp, c2sc) kept. Used in true small caps on every card. */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/eb-garamond-sc-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/eb-garamond-sc-latin-600.woff2') format('woff2');
+}

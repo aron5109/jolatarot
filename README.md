@@ -15,7 +15,7 @@ Intended URL: **https://aron5109.github.io/jolatarot/**
 | Framework | React 19 + TypeScript |
 | Build | Vite (`base: '/jolatarot/'`) |
 | Styling | Modern CSS with custom properties, inline SVG and CSS animation (no animation library) |
-| Fonts | Playfair Display and Manrope, self-hosted in `src/assets/fonts` (SIL OFL) |
+| Fonts | EB Garamond in true small caps on every card (Renaissance roman), Playfair Display and Manrope for the page; all self-hosted in `src/assets/fonts` (SIL OFL) |
 | Tests | Vitest + Testing Library (jsdom) |
 | Quality | ESLint (typescript-eslint, react-hooks) and `tsc` |
 
@@ -60,7 +60,7 @@ idle → shuffling → choosing → revealing → revealed → resetting → idl
 
 ## Editing the cards
 
-All cards and spreads live in **`src/data/cards.ts`**. Each card has a number, a name, three keywords, an upright reading and a reversed reading. Its emblem is in `src/components/cardArt.tsx` under the same id. Spread positions (Aðventan, Jólin, Árið 2027, and Jólaspilið þitt for one card) are in `SPREADS`.
+All cards and spreads live in **`src/data/cards.ts`**. Each card has a number, a name, three keywords, an upright reading and a reversed reading. Its emblem is in `src/components/cardArt.tsx` under the same id. The card typeface is EB Garamond (from [octaviopardo/EBGaramond12](https://github.com/octaviopardo/EBGaramond12)), subset to Latin-1 with its OpenType small caps (`smcp`, `c2sc`) kept, and set with `font-variant-caps: small-caps` and `font-synthesis: none`, so the small caps are the real drawn ones, never faked. Spread positions (Aðventan, Jólin, Árið 2027, and Jólaspilið þitt for one card) are in `SPREADS`.
 
 Guidelines (enforced in part by the tests):
 
