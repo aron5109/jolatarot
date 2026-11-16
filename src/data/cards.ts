@@ -58,7 +58,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Kertasníkir',
     keywords: ['Útsjónarsemi', 'Ljós', 'Frumkvæði'],
     upright:
-      'Kertasníkir minnir þig á að eitt lítið ljós dugar til að lýsa upp heilan fund. Þú hefur öll verkfærin sem þarf. Kveiktu á þeim.',
+      'Kertasníkir minnir þig á að eitt lítið kerti dugar til að lýsa upp heilan fund. Kveiktu á þínu.',
     reversed:
       'Einhver er að sníkja kertin þín, tímann þinn og síðustu piparkökuna. Það má segja nei, líka í desember.',
   },
@@ -98,7 +98,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Jólatréð',
     keywords: ['Rætur', 'Hefðir', 'Stöðugleiki'],
     upright:
-      'Jólatréð stendur stöðugt þótt allt hangi utan á því. Ræturnar eru sterkari en þú heldur og hefðirnar halda þér uppi.',
+      'Jólatréð stendur beint þótt hálf fjölskyldan hafi hengt eitthvað á það. Þú berð líka meira en þú heldur.',
     reversed:
       'Tréð hallar örlítið til vinstri. Það gera allir einhvern tímann. Smá stuðningur og þá verður það alveg fullkomið.',
   },
@@ -118,7 +118,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Laufabrauðið',
     keywords: ['Handverk', 'Nákvæmni', 'Samvinna'],
     upright:
-      'Fallegustu mynstrin verða til þegar margar hendur vinna saman. Verkefnið sem þú ert að skera út verður listaverk.',
+      'Fallegustu mynstrin verða til þegar margar hendur skera saman. Fáðu fleiri að borðinu, og einhvern til að steikja.',
     reversed:
       'Laufabrauðið brotnaði. Það bragðast samt alveg jafn vel. Ekki láta fullkomnunaráráttuna skemma gott verk.',
   },
@@ -128,7 +128,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Jólabókaflóðið',
     keywords: ['Þekking', 'Sögur', 'Ró'],
     upright:
-      'Ný saga er að hefjast og þú ert í aðalhlutverki. Gefðu þér tíma til að lesa, hugsa og sofna í sófanum á annan í jólum.',
+      'Gefðu þér tíma til að lesa, hugsa og sofna í sófanum á annan í jólum. Bókin bíður opin þar sem þú sofnaðir.',
     reversed:
       'Bókastaflinn á náttborðinu er orðinn hættulega hár. Byrjaðu á einni. Hinar bíða rólegar eftir þér.',
   },
@@ -140,7 +140,7 @@ export const DECK: readonly TarotCard[] = [
     upright:
       'Eitthvað gott er á leiðinni. Það kemur kannski ekki þegar þú vonaðist eftir því, en það kemur. Settu skóinn út í glugga.',
     reversed:
-      'Kartafla í skónum er ekki dómur, heldur vinsamleg ábending. Það er alltaf hægt að bæta stöðuna fyrir næstu nótt.',
+      'Það kom kartafla í skóinn. Sem betur fer eru jólasveinarnir þrettán og nóg eftir af nóttum til að bæta úr því.',
   },
   {
     id: 'hangikjotid',
@@ -148,7 +148,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Hangikjötið',
     keywords: ['Gnægð', 'Hefð', 'Hlýja'],
     upright:
-      'Gnægð bíður þín, bæði á diskinum og í lífinu. Njóttu hennar án samviskubits og með nóg af uppstúf.',
+      'Diskurinn verður fullur og borðið líka. Njóttu þess án samviskubits og með nóg af uppstúf.',
     reversed:
       'Of mikið af hinu góða er samt of mikið. Mundu eftir vatnsglasinu og göngutúrnum á milli jólaboða.',
   },
@@ -168,7 +168,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Norðurljósin',
     keywords: ['Innblástur', 'Töfrar', 'Ný sýn'],
     upright:
-      'Innblásturinn kemur þegar þú átt síst von á honum. Líttu upp úr skjánum öðru hverju. Himinninn hefur eitthvað að segja.',
+      'Besta hugmynd mánaðarins kemur á bílastæðinu klukkan fimm, ef þú lítur upp úr símanum. Himinninn er í stuði.',
     reversed:
       'Spáin var góð en það er skýjað. Góðar hugmyndir þurfa stundum eitt kvöld í viðbót. Ekki gefast upp á þeim.',
   },
@@ -178,7 +178,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Snjókarlinn',
     keywords: ['Breytingar', 'Umbreyting', 'Léttleiki'],
     upright:
-      'Allt breytist, líka snjókarlar. Það sem bráðnar í dag verður að einhverju nýju á morgun. Taktu breytingunum fagnandi.',
+      'Allt breytist, líka snjókarlar. Gulrótin og trefillinn lifa það samt af, og það gerir þú líka.',
     reversed:
       'Þú heldur fast í eitthvað sem er farið að bráðna. Kannski er kominn tími til að hnoða nýjan snjókarl.',
   },
@@ -188,7 +188,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Konfektkassinn',
     keywords: ['Jafnvægi', 'Val', 'Sætleiki'],
     upright:
-      'Jafnvægið er lykillinn. Einn mola núna og annan seinna. Þannig endist bæði konfektið og orkan fram yfir áramót.',
+      'Einn mola núna og annan eftir hádegi. Þannig endist bæði konfektið og orkan fram yfir áramót.',
     reversed:
       'Einhver kláraði alla karamellumolana á kaffistofunni og skildi marsípanið eftir. Lærðu að meta það sem eftir er.',
   },
@@ -208,7 +208,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Litlu jólin',
     keywords: ['Samvera', 'Gleði', 'Óvænt atvik'],
     upright:
-      'Gleðin vex þegar henni er deilt. Mættu á litlu jólin, taktu þátt í leiknum og mundu eftir pakkanum í pakkaleikinn.',
+      'Mættu á litlu jólin og taktu þátt, líka í söngnum. Og mundu eftir pakkanum í pakkaleikinn.',
     reversed:
       'Einhver mun syngja í karókí sem hefði betur sleppt því. Brostu, klappaðu og mundu að þetta verður góð saga í janúar.',
   },
@@ -240,7 +240,7 @@ export const DECK: readonly TarotCard[] = [
     upright:
       'Taktu þér hlé, helltu í bolla og settu rjóma ofan á. Bestu samtölin eiga sér stað yfir einhverju heitu.',
     reversed:
-      'Kakóið er orðið kalt því þú gleymdir þér í tölvupóstinum. Hvíld er ekki verðlaun. Hún er nauðsyn.',
+      'Kakóið er orðið kalt því þú gleymdir þér í tölvupóstinum. Hitaðu það aftur. Pósturinn bíður.',
   },
   {
     id: 'aramotabrennan',
@@ -258,7 +258,7 @@ export const DECK: readonly TarotCard[] = [
     name: 'Nýja árið',
     keywords: ['Heild', 'Árangur', 'Nýr kafli'],
     upright:
-      'Hringnum er lokað og nýr kafli hefst. Árið 2027 ber merki alls sem þú lærðir í ár, og það lítur vel út.',
+      'Árið 2026 kenndi þér margt, til dæmis að vista skjalið áður en tölvan endurræsir sig. Það nýtist vel árið 2027.',
     reversed:
       'Áramótaheitin eru orðin tólf. Veldu eitt og gerðu það vel. Hin geta beðið til ársins 2028.',
   },

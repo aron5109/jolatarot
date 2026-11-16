@@ -145,6 +145,7 @@ button {
   height: var(--size);
   border-radius: 50%;
   background: var(--cream);
+  /* unslopovich-ignore glow-shadow: starlight in the night sky is the backdrop */
   box-shadow: 0 0 6px 1px rgba(243, 213, 143, 0.7);
   opacity: 0.25;
   animation: twinkle var(--duration) ease-in-out var(--delay) infinite;
@@ -237,7 +238,6 @@ button {
   width: 2.75rem;
   height: 2.75rem;
   margin-bottom: 0.5rem;
-  filter: drop-shadow(0 0 12px rgba(226, 184, 101, 0.45));
 }
 
 .title {
@@ -246,40 +246,12 @@ button {
   font-size: clamp(3rem, 14vw, 5.5rem);
   line-height: 0.95;
   letter-spacing: -0.01em;
-  background: linear-gradient(180deg, #fff3d2 0%, var(--gold-light) 38%, var(--gold) 66%, var(--gold-deep) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.45));
+  color: var(--gold-light);
   padding-bottom: 0.08em;
 }
 
 .subtitle {
-  margin-top: 0.7rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.subtitle::before,
-.subtitle::after {
-  content: '';
-  width: 1.6rem;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold));
-}
-
-.subtitle::after {
-  transform: scaleX(-1);
-}
-
-.intro {
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
@@ -346,7 +318,7 @@ button {
 }
 
 .spread-picker__option[data-checked] {
-  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  background: var(--gold);
   color: #2a1c08;
 }
 
@@ -371,6 +343,7 @@ button {
   background:
     radial-gradient(70% 50% at 50% 50%, rgba(226, 184, 101, 0.18), transparent 70%),
     linear-gradient(160deg, #1b5243 0%, var(--spruce) 45%, #0a2a21 100%);
+  /* unslopovich-ignore glow-shadow: inset gold rules that draw the card-back border */
   box-shadow:
     inset 0 0 0 1.5px rgba(243, 213, 143, 0.85),
     inset 0 0 0 4px #0d3329,
@@ -393,13 +366,13 @@ button {
   top: 50%;
   width: 62%;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0 0 8px rgba(226, 184, 101, 0.4));
 }
 
 .card-face {
   container-type: inline-size;
   background:
     radial-gradient(90% 60% at 50% 40%, #fffaf0 0%, var(--cream) 55%, #efdfbd 100%);
+  /* unslopovich-ignore glow-shadow: inset shading on the card face, not a glow */
   box-shadow:
     inset 0 0 0 1px rgba(176, 127, 55, 0.6),
     inset 0 -10px 24px rgba(176, 127, 55, 0.18);
@@ -527,20 +500,7 @@ button {
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(243, 213, 143, 0.32) 0%, rgba(226, 184, 101, 0.1) 40%, transparent 68%);
-  animation: glow-breathe 4.5s ease-in-out infinite;
-}
-
-@keyframes glow-breathe {
-  0%,
-  100% {
-    opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.95);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.04);
-  }
+  background: radial-gradient(circle, rgba(243, 213, 143, 0.2) 0%, rgba(226, 184, 101, 0.06) 40%, transparent 68%);
 }
 
 .deck {
@@ -552,21 +512,10 @@ button {
   background: none;
   cursor: pointer;
   border-radius: 10px;
-  animation: deck-float 5s ease-in-out infinite;
 }
 
 .deck:disabled {
   cursor: default;
-}
-
-@keyframes deck-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(1deg);
-  }
 }
 
 .deck__card {
@@ -579,9 +528,7 @@ button {
 }
 
 .deck__card:last-child {
-  box-shadow:
-    0 22px 40px rgba(0, 0, 0, 0.5),
-    0 0 30px rgba(226, 184, 101, 0.18);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5);
 }
 
 .deck:not(:disabled):hover .deck__card:last-child,
@@ -590,10 +537,6 @@ button {
 }
 
 /* Riffle: alternate cards swing out to either side and back in. */
-.table--deck[data-phase='shuffling'] .deck {
-  animation: none;
-}
-
 .table--deck[data-phase='shuffling'] .deck__card {
   animation: riffle-left calc(var(--shuffle-ms) / 2) var(--ease-in-out) calc(var(--i) * 18ms) 2 both;
 }
@@ -669,9 +612,7 @@ button {
 
 .choice:hover:not([data-picked]) {
   transform: translateY(-6px);
-  box-shadow:
-    0 18px 26px rgba(0, 0, 0, 0.45),
-    0 0 18px rgba(226, 184, 101, 0.25);
+  box-shadow: 0 18px 26px rgba(0, 0, 0, 0.45);
 }
 
 .choice[data-picked] {
@@ -679,8 +620,7 @@ button {
   cursor: default;
   box-shadow:
     0 18px 30px rgba(0, 0, 0, 0.5),
-    0 0 0 2px var(--gold-light),
-    0 0 28px rgba(243, 213, 143, 0.55);
+    0 0 0 2px var(--gold-light);
 }
 
 .choice__badge {
@@ -696,7 +636,7 @@ button {
   font-weight: 600;
   font-size: 1rem;
   color: #2a1c08;
-  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  background: var(--gold-light);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   animation: pop 0.35s var(--ease-snap) both;
 }
@@ -750,19 +690,21 @@ button {
 
 .spread__reversed {
   margin-top: -0.2rem;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
   color: var(--cream-soft);
-  opacity: 0.8;
 }
 
+/* Position names use the cards' own small caps, so the table reads like the deck. */
 .spread__position {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: var(--font-card);
+  font-variant-caps: small-caps;
+  font-synthesis: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
   color: var(--gold);
   white-space: nowrap;
 }
@@ -830,19 +772,16 @@ button {
 .btn--primary {
   border: 0;
   color: #2a1c08;
-  background: linear-gradient(180deg, #fbe7b5 0%, var(--gold-light) 30%, var(--gold) 70%, #c6913f 100%);
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.4),
-    0 0 22px rgba(226, 184, 101, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: var(--gold);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn--primary:not(:disabled):hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 14px 28px rgba(0, 0, 0, 0.45),
-    0 0 30px rgba(243, 213, 143, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  background: var(--gold-light);
+}
+
+.btn--primary:not(:disabled):active {
+  transform: translateY(1px);
 }
 
 .btn--ghost {
@@ -900,13 +839,9 @@ button {
 }
 
 .reading__item {
-  padding: 1.15rem 1.2rem 1.25rem;
-  border-radius: 16px;
-  border: 1px solid rgba(226, 184, 101, 0.28);
-  background: linear-gradient(180deg, rgba(18, 63, 50, 0.72), rgba(8, 30, 23, 0.8));
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  padding: 1rem 1.2rem 1.2rem;
+  border-top: 1px solid var(--gold-deep);
+  background: rgba(6, 20, 15, 0.72);
   animation: rise-in 0.6s var(--ease-out) calc(var(--i) * 110ms) both;
 }
 
@@ -922,19 +857,22 @@ button {
 }
 
 .reading__position {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: var(--font-card);
+  font-variant-caps: small-caps;
+  font-synthesis: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
   color: var(--gold);
 }
 
 .reading__hint {
-  letter-spacing: 0.04em;
-  text-transform: none;
+  font-family: var(--font-sans);
+  font-variant-caps: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0;
   font-weight: 500;
   color: var(--cream-soft);
-  opacity: 0.85;
 }
 
 .reading__card {
@@ -957,15 +895,9 @@ button {
 }
 
 .reading__reversed {
-  align-self: center;
-  padding: 0.15rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(226, 184, 101, 0.55);
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
   color: var(--gold-light);
 }
 
@@ -1134,19 +1066,14 @@ button {
   }
 
   .spread__position {
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
+    font-size: 1rem;
+    letter-spacing: 0;
   }
 }
 
 /* ==========================================================================
    Reduced motion: no flying or flipping, just short fades.
    ========================================================================== */
-
-.app[data-reduced-motion] .deck,
-.app[data-reduced-motion] .deck-glow {
-  animation: none;
-}
 
 .app[data-reduced-motion] .table--deck[data-phase='shuffling'] .deck__card {
   animation: none;

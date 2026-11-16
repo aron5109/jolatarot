@@ -33,7 +33,6 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('heading', { level: 1, name: 'Jólatarot' })).toBeInTheDocument();
     expect(screen.getByText('Spilin sem sjá jólin fyrir')).toBeInTheDocument();
-    expect(screen.getByText('Hvað segja spilin um jólin þín?')).toBeInTheDocument();
     expect(screen.getAllByRole('button', { name: 'Stokka spilin' })).toHaveLength(2);
     expect(screen.getByRole('radio', { name: 'Þrjú spil' })).toBeChecked();
   });

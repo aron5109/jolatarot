@@ -35,11 +35,3 @@ export function CheckIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-
-export function SparkIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg {...base} {...props} fill="currentColor" stroke="none">
-      <path d="M12 2.5 13.8 10.2 21.5 12 13.8 13.8 12 21.5 10.2 13.8 2.5 12 10.2 10.2Z" />
-    </svg>
-  );
-}
