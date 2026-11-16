@@ -23,7 +23,7 @@ export function Reading({ lines, headingRef }: ReadingProps) {
             </p>
             <h3 className="reading__card">
               <span className="reading__number">{toRoman(drawn.card.number)}</span> {drawn.card.name}
-              {drawn.reversed && <span className="reading__reversed">Öfugt</span>}
+              {drawn.reversed && <span className="reading__reversed">öfugt</span>}
             </h3>
             <p className="reading__keywords">{drawn.card.keywords.join(' · ')}</p>
             <p className="reading__text">{cardText(drawn)}</p>

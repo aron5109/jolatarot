@@ -5,7 +5,7 @@ import { Ornament } from './components/Ornament';
 import { Reading } from './components/Reading';
 import { SpreadPicker } from './components/SpreadPicker';
 import { Table } from './components/Table';
-import { CheckIcon, CopyIcon, ShuffleIcon, SparkIcon } from './components/icons';
+import { CheckIcon, CopyIcon, ShuffleIcon } from './components/icons';
 import { SPREADS } from './data/cards';
 import { useReadingMachine } from './hooks/useReadingMachine';
 import { useReducedMotion } from './hooks/useReducedMotion';
@@ -146,8 +146,6 @@ export default function App() {
           <p className="subtitle">Spilin sem sjá jólin fyrir</p>
         </header>
 
-        <p className="intro">Hvað segja spilin um jólin þín?</p>
-
         <SpreadPicker value={state.spread} disabled={phase !== 'idle'} onChange={setSpread} />
 
         <p className="instruction" aria-hidden={phase === 'choosing' ? undefined : true}>
@@ -173,7 +171,6 @@ export default function App() {
           {showReading && (
             <>
               <button type="button" className="btn btn--primary" onClick={reset} disabled={phase !== 'revealed'}>
-                <SparkIcon className="btn__icon" />
                 Ný lögn
               </button>
               <button
